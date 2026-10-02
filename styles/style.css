@@ -106,6 +106,7 @@ ol {
   font-family: 'Fira Sans Condensed', 'Arial Narrow', 'Helvetica Narrow', sans-serif;
   font-size: 18px;
   font-weight: 400;
+  margin-block-end: 5px
 }
 
 .search-form__label {
@@ -126,7 +127,6 @@ ol {
   border-right: none;
   background-color: transparent;
   color: #fff;
-  text-align: center;
   font-size: 18px;
   font-family: inherit;
   outline: none;
@@ -152,8 +152,8 @@ ol {
 .search-form__pseudo-checkbox {
   position: relative;
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 19px;
+  height: 19px;
   border: 1px solid #fff;
   box-sizing: border-box;
   vertical-align: middle;
@@ -231,12 +231,7 @@ ol {
 .content__list-item {
   font-family: 'Fira Sans Condensed', 'Arial Narrow', 'Helvetica Narrow', sans-serif;
   font-size: 18px;
-}
-
-.content__list-item:focus-visible {
-  outline: 1px solid #fff;
-  padding-left: 3px;
-  padding-right: 3px;
+  padding-inline: 3px
 }
 
 .content__card-link {
@@ -253,8 +248,16 @@ ol {
   background-color: #545050;
 }
 
+.content__card-link_current {
+  background-color: #545050;
+}
+
 .content__card-link:focus {
   outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
 }
 
 .content__video-card {
@@ -267,6 +270,7 @@ ol {
   min-width: 194px;
   height: 103px;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description-container {
@@ -288,13 +292,25 @@ ol {
   text-overflow: ellipsis;
 }
 
+.content__video-card-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+  
+}
+
 .button {
   font-family: 'Fira Sans Condensed', 'Arial Narrow', 'Helvetica Narrow', sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 100%;
   text-align: center;
-  height: 34px;
+  min-height: 34px;
   flex-shrink: 0;
   border: 1px solid #fff;
   color: #fff;
